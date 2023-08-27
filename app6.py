@@ -21,8 +21,8 @@ if model_dir:
     model_key_base = os.path.join(model_dir, "stable-diffusion-xl-base-0.9")
     model_key_refiner = os.path.join(model_dir, "stable-diffusion-xl-refiner-0.9")
 else:
-    model_key_base = "stabilityai/stable-diffusion-xl-base-0.9"
-    model_key_refiner = "stabilityai/stable-diffusion-xl-refiner-0.9"
+    model_key_base = "stabilityai/stable-diffusion-xl-base-1.0"
+    model_key_refiner = "stabilityai/stable-diffusion-xl-refiner-1.0"
 
 # Use refiner (enabled by default)
 enable_refiner = os.getenv("ENABLE_REFINER", "true").lower() == "true"
