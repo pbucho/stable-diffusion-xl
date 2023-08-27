@@ -18,8 +18,8 @@ access_token = os.getenv("ACCESS_TOKEN")
 
 if model_dir:
     # Use local model
-    model_key_base = os.path.join(model_dir, "stable-diffusion-xl-base-0.9")
-    model_key_refiner = os.path.join(model_dir, "stable-diffusion-xl-refiner-0.9")
+    model_key_base = os.path.join(model_dir, "stabilityai/stable-diffusion-xl-base-1.0")
+    model_key_refiner = os.path.join(model_dir, "stabilityai/stable-diffusion-xl-refiner-1.0")
 else:
     model_key_base = "stabilityai/stable-diffusion-xl-base-1.0"
     model_key_refiner = "stabilityai/stable-diffusion-xl-refiner-1.0"
@@ -308,7 +308,7 @@ with block:
                   <rect x="23" y="69" width="23" height="23" fill="black"></rect>
                 </svg>
                 <h1 style="font-weight: 900; margin-bottom: 7px;margin-top:5px">
-                  Stable Diffusion XL 0.9 Demo
+                  Stable Diffusion XL 1.0
                 </h1>
               </div>
               <p style="margin-bottom: 10px; font-size: 94%; line-height: 23px;">
@@ -318,7 +318,7 @@ with block:
 				<br/>
 				Patreon exclusive posts index : <a style="text-decoration: underline;" href="https://github.com/FurkanGozukara/Stable-Diffusion/blob/main/Patreon-Posts-Index.md">https://github.com/FurkanGozukara/Stable-Diffusion/blob/main/Patreon-Posts-Index.md</a>
 				<br/>
-                Stable Diffusion XL 0.9 is the latest text-to-image model from StabilityAI. 
+                Stable Diffusion XL 1.0 is the latest text-to-image model from StabilityAI. 
                 <br/>
                 For faster generation and API access you can try
                 <a
