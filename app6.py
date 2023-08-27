@@ -442,4 +442,4 @@ Despite how impressive being able to turn text into image is, beware to the fact
                 """
             )
 
-block.queue().launch(share=share)
+block.queue().launch(share=True)
