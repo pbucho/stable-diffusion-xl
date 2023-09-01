@@ -13,13 +13,13 @@ from share_btn import community_icon_html, loading_icon_html, share_js
 
 # SDXL code: https://github.com/huggingface/diffusers/pull/3859
 
-model_dir = os.getenv("SDXL_MODEL_DIR")
+model_dir = '/workspace'
 access_token = os.getenv("ACCESS_TOKEN")
 
 if model_dir:
     # Use local model
-    model_key_base = os.path.join(model_dir, "stabilityai/stable-diffusion-xl-base-1.0")
-    model_key_refiner = os.path.join(model_dir, "stabilityai/stable-diffusion-xl-refiner-1.0")
+    model_key_base = os.path.join(model_dir, "stable-diffusion-xl-base-1.0")
+    model_key_refiner = os.path.join(model_dir, "stable-diffusion-xl-refiner-1.0")
 else:
     model_key_base = "stabilityai/stable-diffusion-xl-base-1.0"
     model_key_refiner = "stabilityai/stable-diffusion-xl-refiner-1.0"
