@@ -10,3 +10,4 @@ PyWavelets==1.2.0
 safetensors==0.3.3
 gradio==3.21.0
 diffusers==0.20.0
+xformers==0.0.20
