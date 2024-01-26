@@ -66,7 +66,7 @@ def infer(prompt, negative, scale, samples=1, steps=50, refiner_steps=15, num_im
     images_b64_list = []
     for i in range(0, num_images):
         images = pipe(prompt=prompt, negative_prompt=negative, guidance_scale=scale, num_inference_steps=steps).images
-        os.makedirs(r"mydrive/MyDrive/sdxloutput", exist_ok=True)
+        os.makedirs(r"/content/mydrive/MyDrive/sdxloutput", exist_ok=True)
         gc.collect()
         torch.cuda.empty_cache()
 
@@ -80,7 +80,7 @@ def infer(prompt, negative, scale, samples=1, steps=50, refiner_steps=15, num_im
                     image_b64 = (f"data:image/jpeg;base64,{img_str}")
                     images_b64_list.append(image_b64)
                     # Save the image as PNG with unique timestamp
-                    filename = f"mydrive/MyDrive/sdxloutput/generated_image_{timestamp}_{i}.png"
+                    filename = f"/content/mydrive/MyDrive/sdxloutput/generated_image_{timestamp}_{i}.png"
                     image.save(filename, format="PNG")
 
             images = pipe_refiner(prompt=prompt, negative_prompt=negative, num_inference_steps=refiner_steps).images
@@ -99,7 +99,7 @@ def infer(prompt, negative, scale, samples=1, steps=50, refiner_steps=15, num_im
             image_b64 = (f"data:image/jpeg;base64,{img_str}")
             images_b64_list.append(image_b64)
             # Save the image as PNG with unique timestamp
-            filename = f"mydrive/MyDrive/sdxloutput/generated_image_{timestamp}_{i}.png"
+            filename = f"/content/mydrive/MyDrive/sdxloutput/generated_image_{timestamp}_{i}.png"
             image.save(filename, format="PNG")
 
     return images_b64_list
