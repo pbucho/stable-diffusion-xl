@@ -103,11 +103,11 @@ def infer(prompt, negative, scale, samples=4, steps=50, refiner_strength=0.3, nu
 
     return images_b64_list
 
-if len(sys.argv) > 2
+if len(sys.argv) > 2:
 	prompt = sys.argv[1]
 else
 	prompt = "A beautiful landscape"
-if len(sys.argv) > 3
+if len(sys.argv) > 3:
 	negative = sys.argv[2]
 
 infer(prompt,negative,50,1,0.3,4)
