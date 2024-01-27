@@ -105,7 +105,7 @@ def infer(prompt, negative, scale, samples=4, steps=50, refiner_strength=0.3, nu
 
 if len(sys.argv) > 2:
 	prompt = sys.argv[1]
-else
+else:
 	prompt = "A beautiful landscape"
 if len(sys.argv) > 3:
 	negative = sys.argv[2]
