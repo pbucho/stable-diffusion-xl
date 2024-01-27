@@ -109,5 +109,7 @@ else:
 	prompt = "A beautiful landscape"
 if len(sys.argv) > 3:
 	negative = sys.argv[2]
+else:
+	negative = ""
 
 infer(prompt,negative,50,1,0.3,4)
