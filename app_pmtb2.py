@@ -7,6 +7,7 @@ import base64
 from io import BytesIO
 import os
 import gc
+import time
 from datetime import datetime
 
 from share_btn import community_icon_html, loading_icon_html, share_js
@@ -231,7 +232,7 @@ css = """
         .image_duplication{position: absolute; width: 100px; left: 50px}
 """
 
-#block = gr.Blocks(css=css, timeout=300)
+block = gr.Blocks(css=css, timeout=300)
 
 examples = [
     [
@@ -442,5 +443,7 @@ Despite how impressive being able to turn text into image is, beware to the fact
                 """
             )
 
-#block.queue().launch(share=True)
-iface.launcg(share=True,debug=True)
+block.queue().launch(share=True,debug=True)
+#iface.launch(share=True,debug=True)
+
+time.sleep(300)

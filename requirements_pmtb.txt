@@ -8,3 +8,4 @@ opencv-python>=4.1.0.25
 safetensors
 gradio==3.14.0
 xformers==0.0.20
+diffusers==0.25.1
