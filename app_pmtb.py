@@ -107,7 +107,7 @@ def infer(prompt, negative, scale, samples=4, steps=50, refiner_strength=0.3, nu
 i = 99999
 while i >= 0:
     prompt = input("Prompt> ")
-    if(len prompt <= 0):
+    if(len(prompt) <= 0):
         prompt = "A beautiful landscape"
     negative = input("Negative prompt> ")
 
